@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>repl.it</title>
+	</head>
+	<body>
+		<a href="http://localhost:443">home</a>
+  	<h1 id="h1">{NoteName}</h1>
+		<p id="saved" style="color:#555555">saved</p>
+		<button id="save">save</button>
+		<button id="rename">rename</button>
+		<button id="delete1" style = "background-color: #ff4d4d"> delete </button>
+		<br>
+		<textarea id="text">{text}</textarea>
+
+
+    <script>
+			let name = document.getElementById("h1").textContent;
+
+			let save = document.getElementById("save");
+			save.onclick = function () {
+				let text = document.getElementById("text").value;
+				location = `/notes/${name}?action=save&text=${text}`;
+			}
+			let rename = document.getElementById("rename");
+			rename.onclick = function () {
+				if (document.getElementById("saved").textContent == "unsaved") {
+					alert("save before renaming!");
+				} else {
+					let newname = prompt("enter new name",name);
+					if (newname != null) location = `/notes/${name}?action=rename&newname=${newname}`;
+					
+				}
+			}
+			let delete1 = document.getElementById("delete1");
+			delete1.onclick = function () {
+				location = `/notes/${name}?action=delete`;
+			}
+			let textarea = document.getElementById("text");
+			textarea.oninput = function(){
+				document.getElementById("saved").textContent = "unsaved";
+			}
+		</script>
+  </body>
+</html>

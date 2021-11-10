@@ -1,0 +1,36 @@
+input{
+	border:none;
+	margin:none;
+	padding:none;
+	width:1em;
+	border-style: none;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input:focus{
+	outline: none;
+}
+table, th {
+  border: 2px solid black;
+  border-collapse: collapse;
+	margin:none;
+	padding:none;
+}
+td{
+	width:1em;
+	border: 1px solid black;
+  border-collapse: collapse;
+}
+.size{
+	width:3em;
+	border:1px solid black;
+}
+.b-right{
+	border-right:2px solid black;
+}
+.b-bottom{
+	border-bottom:2px solid black;
+}

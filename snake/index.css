@@ -1,0 +1,55 @@
+p{
+	font-size: 1.5em;
+	margin: 0px;
+	padding: 0px;
+}
+img{
+	width: 0px;
+	height: 0px;
+}
+
+
+canvas{
+	margin:0px;
+	border: 3px solid white;
+}
+.wrap{
+	height: 0px;
+	width: 0px;
+	display: grid;
+	grid-template-rows: 1fr 1fr 1fr;
+	grid-template-columns: 1fr 1fr 1fr;
+	
+}
+.wrap p{
+	grid-row: 1/2;
+	grid-column: 1/2;
+	height: 0px;
+	margin: 0px;
+	padding: 0px;
+}
+body{
+	margin: 5px;
+	padding: 0px;
+}
+
+
+.uo{
+	grid-row: 1/2;
+	grid-column: 2/3;
+	
+}
+.down{
+	grid-row: 3/4;
+	grid-column: 2/3;
+	
+}
+.left{
+	grid-row: 2/3;
+	grid-column: 1/2;
+	
+}
+.right{
+	grid-row: 2/3;
+	grid-column: 3/4;
+}

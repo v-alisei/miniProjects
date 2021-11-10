@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <body align="center" style="background: #ff8000">
+		<canvas width="500" height="500" id="canvas"></canvas>
+    <script>
+			let canvas = document.getElementById("canvas").getContext("2d");
+			drawBranch(250, 400, Math.PI/2, 75, 0)
+			function drawBranch(x1, y1, angle, length, depth){
+				if (depth == 12) return
+				let x2 = Math.round(x1 + Math.cos(angle)*length);
+				let y2 = Math.round(y1 - Math.sin(angle)*length);
+				canvas.beginPath();
+				canvas.moveTo(x1, y1);
+				canvas.lineTo(x2, y2);
+				canvas.stroke();
+				drawBranch(x2, y2, angle + Math.PI/4, Math.round(length*0.62), depth+1)
+				drawBranch(x2, y2, angle - Math.PI/4, Math.round(length*0.62), depth+1)
+			}
+		</script>
+  </body>
+</html>
